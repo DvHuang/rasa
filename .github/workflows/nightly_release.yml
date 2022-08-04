@@ -1,9 +1,11 @@
 name: Nightly Builds
 on:
-  schedule:
-    # Runs every weekday at 1am
-    - cron: 0 1 * * 1-5
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+  pull_request:
 
 
 jobs:
@@ -35,18 +37,6 @@ jobs:
           GH_TAG=${LATEST_NIGHTLY_VERSION}.dev${DATE}
           echo ${GH_TAG}
           echo "::set-output name=tag_name::${GH_TAG}"
-
-      - name: Tag latest main commit as nightly
-        uses: actions/github-script@v5
-        with:
-          github-token: ${{ secrets.RASABOT_GITHUB_TOKEN }}
-          script: |
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: "refs/tags/${{ steps.set_tagname.outputs.tag_name }}",
-              sha: context.sha
-            })
 
 
   deploy:

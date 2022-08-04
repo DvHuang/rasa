@@ -8,6 +8,7 @@ import sys
 import toml
 from pathlib import Path
 from typing import Text
+from subprocess import CalledProcessError, check_call, check_output
 from pep440_version_utils import Version, is_valid_version
 
 VERSION_FILE_PATH = "rasa/version.py"
@@ -102,9 +103,50 @@ def print_done_message(version: Version) -> None:
     print(f"\033[94m All done - changes for rasa nightly version {version} are ready! \033[0m")
     print()
 
+def git_current_branch() -> Text:
+    """Returns the current git branch of the local repo."""
+
+    try:
+        output = check_output(["git", "symbolic-ref", "--short", "HEAD"])
+        return output.decode().strip()
+    except CalledProcessError:
+        # e.g. we are in detached head state
+        return "main"
+
+def git_current_branch_is_main() -> bool:
+    """
+    Returns True if the current local git
+    branch is main or a release branch e.g. 1.10.x
+    """
+    current_branch = git_current_branch()
+    return (
+        current_branch == "main"
+        or current_branch == "ATO-114"
+    )
+
+def tag_commit(tag: Text) -> None:
+    """Tags a git commit."""
+    print(f"Applying tag '{tag}' to commit.")
+    check_call(["git", "tag", tag, "-m", "This is an internal development build"])
+
+def push_tag(tag: Text) -> None:
+    """Pushes a tag to the remote."""
+    print(f"Pushing tag '{tag}' to origin.")
+    check_call(["git", "push", "origin", tag, "--tags"])
+
+def print_tag_release_done_message(version: Version) -> None:
+    """
+    Print final information for the user about the tagged commit
+    """
+
+    print()
+    print(
+        f"\033[94m All done - tag for version {version} was added and pushed to the remote \033[0m"
+    )
+
 
 def main(args: argparse.Namespace) -> None:
-    """Start a release preparation."""
+    """Start a nightly release preparation."""
 
     print(
         "The release script will temporarily change the version number to a nightly version. Let's go!"
@@ -116,6 +158,21 @@ def main(args: argparse.Namespace) -> None:
     write_version_to_pyproject(PYPROJECT_FILE_PATH, version)
 
     print_done_message(version)
+
+    branch = git_current_branch()
+    if not git_current_branch_is_main():
+        print(
+            f"""
+    You are currently not on the main branch.
+    Nightly release should only happen from main branch.
+            """
+        )
+        sys.exit(1)
+    tag = str(version)
+    tag_commit(tag)
+    push_tag(tag)
+
+    print_tag_release_done_message(version)
 
 
 if __name__ == "__main__":
