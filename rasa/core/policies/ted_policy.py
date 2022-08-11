@@ -125,18 +125,18 @@ LABEL_KEY = LABEL
 LABEL_SUB_KEY = IDS
 LENGTH = "length"
 INDICES = "indices"
-SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
-SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
-LABEL_FEATURES_TO_ENCODE = [
-   f"{LABEL}_{ACTION_NAME}",
-   f"{LABEL}_{ACTION_TEXT}",
-   f"{LABEL}_{INTENT}",
-]
-# SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME]
-# SEQUENCE_FEATURES_TO_ENCODE = [TEXT]
+# SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
+# SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
 # LABEL_FEATURES_TO_ENCODE = [
-#     f"{LABEL}_{INTENT}",
+#    f"{LABEL}_{ACTION_NAME}",
+#    f"{LABEL}_{ACTION_TEXT}",
+#    f"{LABEL}_{INTENT}",
 # ]
+SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME]
+SEQUENCE_FEATURES_TO_ENCODE = [TEXT]
+LABEL_FEATURES_TO_ENCODE = [
+    f"{LABEL}_{INTENT}",
+]
 STATE_LEVEL_FEATURES = [ENTITIES, SLOTS, ACTIVE_LOOP]
 PREDICTION_FEATURES = STATE_LEVEL_FEATURES + SENTENCE_FEATURES_TO_ENCODE + [DIALOGUE]
 
@@ -1573,7 +1573,7 @@ class TED(TransformerRasaModel):
             sequence_feature_lengths = self._get_sequence_feature_lengths(
                 tf_batch_data, attribute
             )
-
+            logger.info(" ------- sequence_feature_lengths:{} -------".format(sequence_feature_lengths[0]))
             # sequence_feature_lengths contain `0` for "fake" features, while
             # tf_batch_data[attribute] contains only "real" features. Hence, we need to
             # get rid of the lengths that are 0. This step produces a 1D tensor.
@@ -1745,16 +1745,15 @@ class TED(TransformerRasaModel):
         # if both action text and action name are present, combine them; otherwise,
         # return the one which is present
 
+        batch_action = None
         if (
             batch_encoded.get(ACTION_TEXT) is not None
             and batch_encoded.get(ACTION_NAME) is not None
         ):
-            batch_action = batch_encoded.pop(ACTION_TEXT) + batch_encoded.pop(
-                ACTION_NAME
-            )
+            batch_action = batch_encoded.pop(ACTION_TEXT) + batch_encoded.pop(ACTION_NAME)
         elif batch_encoded.get(ACTION_TEXT) is not None:
             batch_action = batch_encoded.pop(ACTION_TEXT)
-        else:
+        elif batch_encoded.get(ACTION_NAME) is not None:
             batch_action = batch_encoded.pop(ACTION_NAME)
         # same for user input
         if (
@@ -1766,9 +1765,11 @@ class TED(TransformerRasaModel):
             batch_user = batch_encoded.pop(TEXT)
         else:
             batch_user = batch_encoded.pop(INTENT)
-        logger.info("------ use batch_user only! -------")
-        # batch_features = [batch_user, batch_action]
-        batch_features = [batch_user]
+
+        if batch_action is not None:
+            batch_features = [batch_user, batch_action]
+        else:
+            batch_features = [batch_user]
 
         # once we have user input and previous action,
         # add all other attributes (SLOTS, ACTIVE_LOOP, etc.) to batch_features;
@@ -1776,7 +1777,7 @@ class TED(TransformerRasaModel):
             batch_features.append(batch_encoded.get(key))
 
         batch_features = tf.concat(batch_features, axis=-1)
-        #logger.info("------ batch_features length = {} -------", str(tf.shape(batch_features)))
+
         return batch_features, text_output, text_sequence_lengths
 
     def _reshape_for_entities(
