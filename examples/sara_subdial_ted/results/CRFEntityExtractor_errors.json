@@ -1,0 +1,89 @@
+[
+  {
+    "text": "inform next week",
+    "entities": [
+      {
+        "start": 7,
+        "end": 16,
+        "value": "next week",
+        "entity": "startdate"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "enddate",
+        "start": 7,
+        "end": 16,
+        "confidence_entity": 0.45095037647200487,
+        "value": "next week",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "startdate",
+        "start": 7,
+        "end": 16,
+        "confidence_entity": 0.6910923719406128,
+        "value": "next week",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "inform 10.03.2018",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "10.03.2018",
+        "entity": "enddate"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "startdate",
+        "start": 7,
+        "end": 17,
+        "confidence_entity": 0.44072952453242953,
+        "value": "10.03.2018",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "enddate",
+        "start": 7,
+        "end": 17,
+        "confidence_entity": 0.4790697991847992,
+        "value": "10.03.2018",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "inform tomorrow",
+    "entities": [
+      {
+        "start": 7,
+        "end": 15,
+        "value": "tomorrow",
+        "entity": "enddate"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "startdate",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.4532602134683844,
+        "value": "tomorrow",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "startdate",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.6412937641143799,
+        "value": "tomorrow",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

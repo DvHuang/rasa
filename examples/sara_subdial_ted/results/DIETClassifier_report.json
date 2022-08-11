@@ -1,0 +1,59 @@
+{
+  "people": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "enddate": {
+    "precision": 0.75,
+    "recall": 0.5,
+    "f1-score": 0.6,
+    "support": 6,
+    "confused_with": {
+      "startdate": 3
+    }
+  },
+  "price": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "startdate": {
+    "precision": 0.6666666666666666,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.75,
+    "support": 7,
+    "confused_with": {
+      "enddate": 1
+    }
+  },
+  "location": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.8260869565217391,
+    "recall": 0.8260869565217391,
+    "f1-score": 0.8260869565217391,
+    "support": 23
+  },
+  "macro avg": {
+    "precision": 0.8833333333333332,
+    "recall": 0.8714285714285716,
+    "f1-score": 0.8699999999999999,
+    "support": 23
+  },
+  "weighted avg": {
+    "precision": 0.8333333333333333,
+    "recall": 0.8260869565217391,
+    "f1-score": 0.8195652173913044,
+    "support": 23
+  }
+}

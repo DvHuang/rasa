@@ -1,0 +1,320 @@
+{
+  "utter_suggest_hotel": {
+    "precision": 0.9298245614035088,
+    "recall": 0.9464285714285714,
+    "f1-score": 0.9380530973451328,
+    "support": 56
+  },
+  "[1](people)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 6
+  },
+  "utter_ask_people": {
+    "precision": 0.7209302325581395,
+    "recall": 0.6739130434782609,
+    "f1-score": 0.6966292134831461,
+    "support": 46
+  },
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 330
+  },
+  "utter_correct_people_hotel": {
+    "precision": 0.625,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.6666666666666666,
+    "support": 7
+  },
+  "correct": {
+    "precision": 1.0,
+    "recall": 0.84,
+    "f1-score": 0.9130434782608696,
+    "support": 25
+  },
+  "utter_correct_location_hotel": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "[6](people)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 4
+  },
+  "utter_ask_enddate": {
+    "precision": 0.9636363636363636,
+    "recall": 0.9814814814814815,
+    "f1-score": 0.9724770642201834,
+    "support": 54
+  },
+  "[paris](location)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 23
+  },
+  "[10.03.2018](startdate)": {
+    "precision": 0.27906976744186046,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.37499999999999994,
+    "support": 21
+  },
+  "[10.03.2018](enddate)": {
+    "precision": 0.27906976744186046,
+    "recall": 0.5454545454545454,
+    "f1-score": 0.36923076923076914,
+    "support": 22
+  },
+  "utter_explain_location_hotel": {
+    "precision": 0.2727272727272727,
+    "recall": 0.375,
+    "f1-score": 0.3157894736842105,
+    "support": 8
+  },
+  "utter_explain_enddate_hotel": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 9
+  },
+  "[x](startdate)": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "[cheap](price)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 5
+  },
+  "[mid-range](price)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 7
+  },
+  "utter_worked_hotel": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 24
+  },
+  "utter_ask_details": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 29
+  },
+  "explain": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 32
+  },
+  "inform": {
+    "precision": 0.9724137931034482,
+    "recall": 1.0,
+    "f1-score": 0.9860139860139859,
+    "support": 141
+  },
+  "utter_correct_price_hotel": {
+    "precision": 0.8571428571428571,
+    "recall": 0.75,
+    "f1-score": 0.7999999999999999,
+    "support": 8
+  },
+  "utter_ask_startdate": {
+    "precision": 0.6567164179104478,
+    "recall": 0.9361702127659575,
+    "f1-score": 0.7719298245614035,
+    "support": 47
+  },
+  "utter_correct_enddate_hotel": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 5
+  },
+  "utter_ask_location": {
+    "precision": 0.92,
+    "recall": 0.7666666666666667,
+    "f1-score": 0.8363636363636363,
+    "support": 60
+  },
+  "utter_ask_price": {
+    "precision": 0.6206896551724138,
+    "recall": 0.9473684210526315,
+    "f1-score": 0.75,
+    "support": 38
+  },
+  "did_that_work": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 61
+  },
+  "[next week](enddate)": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 2
+  },
+  "utter_explain_people_hotel": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "[x](location)": {
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1-score": 0.5,
+    "support": 1
+  },
+  "[expensive](price)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 25
+  },
+  "utter_filled_slots": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 29
+  },
+  "None": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 168
+  },
+  "chitchat": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 42
+  },
+  "[May 25th](startdate)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 7
+  },
+  "utter_chitchat": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 42
+  },
+  "[2](people)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 7
+  },
+  "utter_more_info_hotel": {
+    "precision": 0.6065573770491803,
+    "recall": 1.0,
+    "f1-score": 0.7551020408163265,
+    "support": 37
+  },
+  "[4](people)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 18
+  },
+  "[May 26th](enddate)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 6
+  },
+  "[london](location)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 2
+  },
+  "utter_explain_price_hotel": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "[tomorrow](enddate)": {
+    "precision": 0.6666666666666666,
+    "recall": 0.5,
+    "f1-score": 0.5714285714285715,
+    "support": 4
+  },
+  "[x](people)": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "[rome](location)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 5
+  },
+  "[today](startdate)": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 3
+  },
+  "utter_explain_startdate_hotel": {
+    "precision": 0.6363636363636364,
+    "recall": 1.0,
+    "f1-score": 0.7777777777777778,
+    "support": 7
+  },
+  "utter_correct_startdate_hotel": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 3
+  },
+  "request_hotel": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 29
+  },
+  "micro avg": {
+    "precision": 0.7973509933774835,
+    "recall": 0.7931488801054019,
+    "f1-score": 0.7952443857331571,
+    "support": 1518
+  },
+  "macro avg": {
+    "precision": 0.5647647966384556,
+    "recall": 0.756085657715151,
+    "f1-score": 0.6273046906587126,
+    "support": 1518
+  },
+  "weighted avg": {
+    "precision": 0.7226675555003665,
+    "recall": 0.7931488801054019,
+    "f1-score": 0.7462966880710417,
+    "support": 1518
+  },
+  "conversation_accuracy": {
+    "accuracy": 0.0,
+    "correct": 0,
+    "with_warnings": 0,
+    "total": 29
+  }
+}

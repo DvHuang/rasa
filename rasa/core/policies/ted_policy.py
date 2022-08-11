@@ -125,11 +125,18 @@ LABEL_KEY = LABEL
 LABEL_SUB_KEY = IDS
 LENGTH = "length"
 INDICES = "indices"
-SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
-SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
+# SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
+# SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
+# LABEL_FEATURES_TO_ENCODE = [
+#     f"{LABEL}_{ACTION_NAME}",
+#     f"{LABEL}_{ACTION_TEXT}",
+#     f"{LABEL}_{INTENT}",
+# ]
+SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME]
+SEQUENCE_FEATURES_TO_ENCODE = [TEXT]
 LABEL_FEATURES_TO_ENCODE = [
-    f"{LABEL}_{ACTION_NAME}",
-    f"{LABEL}_{ACTION_TEXT}",
+    # f"{LABEL}_{ACTION_NAME}",
+    # f"{LABEL}_{ACTION_TEXT}",
     f"{LABEL}_{INTENT}",
 ]
 STATE_LEVEL_FEATURES = [ENTITIES, SLOTS, ACTIVE_LOOP]
@@ -657,6 +664,7 @@ class TEDPolicy(Policy):
             self.config[TENSORBOARD_LOG_LEVEL],
             self.tmp_checkpoint_dir,
         )
+        print("Amazing !!!!!!!")
         self.model.fit(
             data_generator,
             epochs=self.config[EPOCHS],

@@ -1,0 +1,1598 @@
+version: "2.0"
+stories:
+- story: Generated_Story_7766790119829507991
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-2030870466415802501
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [today]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      inform [May 26th]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [mid-range]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-299760704668345064
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_people_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-7795096423415267175
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [1]{"entity":"people" } [rome]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [mid-range]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [May 25th]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-3239466931270169949
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [london]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      correct [london]{"entity":"location" }
+    intent: correct
+  - action: utter_correct_location_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_startdate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      correct [tomorrow]{"entity":"enddate" }
+    intent: correct
+  - action: utter_correct_enddate_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-237418450323459652
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [next week]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_startdate
+  - user: |
+      inform [May 25th]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      correct [tomorrow]{"entity":"enddate" }
+    intent: correct
+  - action: utter_correct_enddate_hotel
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-602327959866684522
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [mid-range]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      correct [expensive]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-6156085551550358362
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [mid-range]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-3053018598832044299
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [May 26th]{"entity":"enddate" } [2]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [May 25th]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_price_hotel
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [cheap]{"entity":"price" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_7818253770017259687
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [tomorrow]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [today]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [rome]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_price_hotel
+  - action: utter_ask_price
+  - user: |
+      correct [May 26th]{"entity":"enddate" }
+    intent: correct
+  - action: utter_correct_enddate_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-7495521714392799214
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [6]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [x]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      correct [x]{"entity":"startdate" }
+    intent: correct
+  - action: utter_correct_startdate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-6349392819907338742
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [6]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      inform [rome]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_price_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [May 25th]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_7949095044941412672
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      inform [1]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_startdate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_startdate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_3476594150763939797
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [mid-range]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      correct [cheap]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_people
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_people_hotel
+  - action: utter_ask_people
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_people_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [2]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_startdate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_startdate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      correct [4]{"entity":"people" }
+    intent: correct
+  - action: utter_correct_people_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_3617952478188475803
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [cheap]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_people_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_4414493161134452794
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [May 26th]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      correct [May 26th]{"entity":"enddate" }
+    intent: correct
+  - action: utter_correct_enddate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_startdate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_price_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-4910041025741432607
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [2]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [rome]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      correct [x]{"entity":"location" }
+    intent: correct
+  - action: utter_correct_location_hotel
+  - action: utter_ask_startdate
+  - user: |
+      correct [x]{"entity":"people" }
+    intent: correct
+  - action: utter_correct_people_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_6324047640260901740
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [6]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      correct [4]{"entity":"people" }
+    intent: correct
+  - action: utter_correct_people_hotel
+  - action: utter_ask_location
+  - user: |
+      correct [1]{"entity":"people" }
+    intent: correct
+  - action: utter_correct_people_hotel
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-4599886154708247544
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [2]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_location
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_location
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-1624530263152194104
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [mid-range]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      correct [expensive]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      correct [expensive]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_location
+  - user: |
+      correct [expensive]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_location
+  - user: |
+      correct [expensive]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_7259100936302585405
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [2]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [rome]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      correct [1]{"entity":"people" }
+    intent: correct
+  - action: utter_correct_people_hotel
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_3133736278245936594
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [1]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      correct [1]{"entity":"people" }
+    intent: correct
+  - action: utter_correct_people_hotel
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-7134039207768445094
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_people
+  - user: |
+      correct [mid-range]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_startdate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_startdate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_startdate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-4990020259764681915
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [May 26th]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      correct [tomorrow]{"entity":"enddate" }
+    intent: correct
+  - action: utter_correct_enddate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      chitchat
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_7206195975968153047
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [cheap]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      correct [cheap]{"entity":"price" }
+    intent: correct
+  - action: utter_correct_price_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-1942533987084426839
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [May 25th]{"entity":"startdate" } [paris]{"entity":"location" } [6]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      correct [May 25th]{"entity":"startdate" }
+    intent: correct
+  - action: utter_correct_startdate_hotel
+  - action: utter_ask_price
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_-5573273196872942075
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [2]{"entity":"people" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      correct [2]{"entity":"people" }
+    intent: correct
+  - action: utter_correct_people_hotel
+  - action: utter_ask_location
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_location_hotel
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_enddate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_7692376286038639225
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [today]{"entity":"startdate" } [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_enddate
+  - user: |
+      correct [May 25th]{"entity":"startdate" }
+    intent: correct
+  - action: utter_correct_startdate_hotel
+  - action: utter_ask_enddate
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_enddate
+  - user: |
+      inform [10.03.2018]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+
+- story: Generated_Story_2895329045844006457
+  steps:
+  - user: |
+      request_hotel
+    intent: request_hotel
+  - action: utter_ask_details
+  - user: |
+      inform [next week]{"entity":"enddate" }
+    intent: inform
+  - action: utter_ask_startdate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_startdate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      explain
+    intent: explain
+  - action: utter_explain_startdate_hotel
+  - action: utter_ask_startdate
+  - user: |
+      inform [10.03.2018]{"entity":"startdate" }
+    intent: inform
+  - action: utter_ask_location
+  - user: |
+      inform [paris]{"entity":"location" }
+    intent: inform
+  - action: utter_ask_price
+  - user: |
+      inform [expensive]{"entity":"price" }
+    intent: inform
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_more_info_hotel
+  - action: utter_ask_people
+  - user: |
+      inform [4]{"entity":"people" }
+    intent: inform
+  - action: utter_filled_slots
+  - action: utter_suggest_hotel
+  - user: |
+      did_that_work
+    intent: did_that_work
+  - action: utter_worked_hotel
+  - action: utter_suggest_hotel
+

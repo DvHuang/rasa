@@ -1,0 +1,76 @@
+version: "2.0"
+intents:
+  - explain
+  - inform
+  - correct
+  - request_hotel
+  - did_that_work
+  - chitchat
+
+entities:
+  - startdate
+  - enddate
+  - price
+  - people
+  - location
+
+slots:
+  startdate:
+    type: categorical
+    influence_conversation: true
+  enddate:
+    type: categorical
+    influence_conversation: true
+  price:
+    type: categorical
+    influence_conversation: true
+  people:
+    type: categorical
+    influence_conversation: true
+  location:
+    type: categorical
+    influence_conversation: true
+
+responses:
+  utter_ask_details:
+  - text: utter_ask_details
+  utter_explain_enddate_hotel:
+  - text: utter_explain_enddate_hotel
+  utter_more_info_hotel:
+  - text: utter_more_info_hotel
+  utter_explain_startdate_hotel:
+  - text: utter_explain_startdate_hotel
+  utter_correct_location_hotel:
+  - text: utter_correct_location_hotel
+  utter_correct_price_hotel:
+  - text: utter_correct_price_hotel
+  utter_ask_enddate:
+  - text: utter_ask_enddate
+  utter_ask_price:
+  - text: utter_ask_price
+  utter_correct_startdate_hotel:
+  - text: utter_correct_startdate_hotel
+  utter_correct_people_hotel:
+  - text: utter_correct_people_hotel
+  utter_explain_location_hotel:
+  - text: utter_explain_location_hotel
+  utter_chitchat:
+  - text: utter_chitchat
+  utter_worked_hotel:
+  - text: utter_worked_hotel
+  utter_suggest_hotel:
+  - text: utter_suggest_hotel
+  utter_ask_people:
+  - text: utter_ask_people
+  utter_ask_startdate:
+  - text: utter_ask_startdate
+  utter_explain_price_hotel:
+  - text: utter_explain_price_hotel
+  utter_ask_location:
+  - text: utter_ask_location
+  utter_filled_slots:
+  - text: utter_filled_slots
+  utter_correct_enddate_hotel:
+  - text: utter_correct_enddate_hotel
+  utter_explain_people_hotel:
+  - text: utter_explain_people_hotel
