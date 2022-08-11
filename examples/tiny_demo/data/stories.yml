@@ -1,0 +1,69 @@
+version: "2.0"
+stories:
+- story: NG0070
+  steps:
+  - intent: inform
+    entities:
+    - taxi_depature_time: time
+  - slot_was_set:
+    - taxi_depature_time: time 
+  - action: utter_request_depature
+  - intent: inform
+    entities:
+    - taxi_depature: depature 
+  - slot_was_set:
+    - taxi_depature: depature 
+  - action: utter_request_destination
+  - intent: inform
+    entities:
+    - taxi_destination: destination 
+  - slot_was_set:
+    - taxi_destination: destination 
+  - action: utter_book_taxi
+
+
+- story: NG0071
+  steps:
+  - intent: inform
+    entities:
+    - taxi_depature: time
+  - slot_was_set:
+    - taxi_depature: time 
+  - action: utter_request_destination
+  - intent: inform
+    entities:
+    - taxi_destination: time
+  - slot_was_set:
+    - taxi_destination: time 
+  - action: utter_request_time
+  - intent: inform
+    entities:
+    - taxi_depature_time: time
+  - slot_was_set:
+    - taxi_depature_time: time 
+  - action: utter_book_taxi
+    
+
+- story: NG0072
+  steps:
+  - intent: inform
+    entities:
+    - taxi_destination: destination 
+  - slot_was_set:
+    - taxi_destination: destination 
+  - action: utter_request_depature
+  - intent: inform
+    entities:
+    - taxi_depature: depature 
+  - slot_was_set:
+    - taxi_depature: depature 
+  - action: utter_request_time
+  - intent: inform
+    entities:
+    - taxi_depature_time: time
+  - slot_was_set:
+    - taxi_depature_time: time 
+  - action: utter_book_taxi
+  - action: utter_book_taxi
+
+

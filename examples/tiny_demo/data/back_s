@@ -1,0 +1,63 @@
+version: "2.0"
+stories:
+- story: SNG0073
+  steps:
+  - intent: inform
+    entities:
+    - taxi_destination: specific
+    - taxi_depature: specific
+  - slot_was_set:
+    - taxi_destination: specific
+    - taxi_depature: specific
+  - action: utter_request_time
+  - intent: inform
+    entities:
+    - taxi_depature_time: time
+  - slot_was_set:
+    - taxi_depature_time: time 
+  - action: utter_book_taxi
+
+- story: PMUL4648 
+  steps:
+  - intent: inform
+    entities:
+    - taxi_destination: specific
+  - slot_was_set:
+    - taxi_destination: specific
+  - action: utter_request_depature
+  - intent: inform
+    entities:
+    - taxi_depature: specific 
+  - slot_was_set:
+    - taxi_depature: specific
+  - action: utter_request_time
+  - intent: inform
+    entities:
+    - taxi_depature_time: time
+  - slot_was_set:
+    - taxi_depature_time: specific
+  - action: utter_book_taxi
+
+- story: PMUL448 
+  steps:
+  - intent: inform
+  - action: utter_request_depature
+  - intent: inform
+    entities:
+    - taxi_depature: specific 
+  - slot_was_set:
+    - taxi_depature: specific
+  - action: utter_request_time
+  - intent: inform
+    entities:
+    - taxi_depature_time: time
+  - slot_was_set:
+    - taxi_depature_time: specific
+  - action: utter_request_destination
+  - intent: inform
+    entities:
+    - taxi_destination: beijing
+  - slot_was_set:
+    - taxi_destination: beijing 
+  - action: utter_book_taxi
+

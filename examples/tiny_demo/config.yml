@@ -1,0 +1,15 @@
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: CRFEntityExtractor
+  - name: CountVectorsFeaturizer
+    token_pattern: (?u)\b\w+\b
+  - name: DIETClassifier 
+  - name: FallbackClassifier
+
+
+policies:
+  - name: TEDPolicy
+    max_history: 10
+    epochs: 10

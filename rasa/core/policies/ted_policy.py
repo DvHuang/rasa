@@ -125,18 +125,18 @@ LABEL_KEY = LABEL
 LABEL_SUB_KEY = IDS
 LENGTH = "length"
 INDICES = "indices"
-#SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
-#SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
-#LABEL_FEATURES_TO_ENCODE = [
-#    f"{LABEL}_{ACTION_NAME}",
-#    f"{LABEL}_{ACTION_TEXT}",
-#    f"{LABEL}_{INTENT}",
-#]
-SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME]
-SEQUENCE_FEATURES_TO_ENCODE = [TEXT]
+SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
+SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
 LABEL_FEATURES_TO_ENCODE = [
-    f"{LABEL}_{INTENT}",
+   f"{LABEL}_{ACTION_NAME}",
+   f"{LABEL}_{ACTION_TEXT}",
+   f"{LABEL}_{INTENT}",
 ]
+# SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME]
+# SEQUENCE_FEATURES_TO_ENCODE = [TEXT]
+# LABEL_FEATURES_TO_ENCODE = [
+#     f"{LABEL}_{INTENT}",
+# ]
 STATE_LEVEL_FEATURES = [ENTITIES, SLOTS, ACTIVE_LOOP]
 PREDICTION_FEATURES = STATE_LEVEL_FEATURES + SENTENCE_FEATURES_TO_ENCODE + [DIALOGUE]
 
@@ -662,6 +662,7 @@ class TEDPolicy(Policy):
             self.config[TENSORBOARD_LOG_LEVEL],
             self.tmp_checkpoint_dir,
         )
+
         self.model.fit(
             data_generator,
             epochs=self.config[EPOCHS],
@@ -671,6 +672,8 @@ class TEDPolicy(Policy):
             verbose=False,
             shuffle=False,  # we use custom shuffle inside data generator
         )
+        self.model.summary()
+
 
     def train(
         self,
@@ -1763,15 +1766,17 @@ class TED(TransformerRasaModel):
             batch_user = batch_encoded.pop(TEXT)
         else:
             batch_user = batch_encoded.pop(INTENT)
+        logger.info("------ use batch_user only! -------")
+        # batch_features = [batch_user, batch_action]
+        batch_features = [batch_user]
 
-        batch_features = [batch_user, batch_action]
         # once we have user input and previous action,
         # add all other attributes (SLOTS, ACTIVE_LOOP, etc.) to batch_features;
         for key in batch_encoded.keys():
             batch_features.append(batch_encoded.get(key))
 
         batch_features = tf.concat(batch_features, axis=-1)
-
+        #logger.info("------ batch_features length = {} -------", str(tf.shape(batch_features)))
         return batch_features, text_output, text_sequence_lengths
 
     def _reshape_for_entities(

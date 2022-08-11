@@ -4,7 +4,8 @@ from tensorflow.python.layers.utils import smart_cond
 from tensorflow.keras import backend as K
 import numpy as np
 from rasa.utils.tensorflow.layers import RandomlyConnectedDense
-
+import logging
+logger = logging.getLogger(__name__)
 
 # from https://www.tensorflow.org/tutorials/text/transformer
 # and https://github.com/tensorflow/tensor2tensor
@@ -41,6 +42,9 @@ class MultiHeadAttention(tf.keras.layers.Layer):
         heads_share_relative_embedding: bool = False,
     ) -> None:
         super().__init__()
+
+        logger.info("----------use_key_relative_position: {} ----------".format(  use_key_relative_position))
+        logger.info("----------use_val_relative_position: {} ----------".format(use_value_relative_position))
 
         if units % num_heads != 0:
             raise ValueError(
@@ -418,6 +422,7 @@ class TransformerEncoderLayer(tf.keras.layers.Layer):
     ) -> None:
         super().__init__()
 
+
         self._layer_norm = tf.keras.layers.LayerNormalization(epsilon=1e-6)
         self._mha = MultiHeadAttention(
             units,
@@ -465,9 +470,7 @@ class TransformerEncoderLayer(tf.keras.layers.Layer):
             training = K.learning_phase()
 
         x_norm = self._layer_norm(x)  # (batch_size, length, units)
-        attn_out, attn_weights = self._mha(
-            x_norm, x_norm, pad_mask=pad_mask, training=training
-        )
+        attn_out, attn_weights = self._mha(x_norm, x_norm, pad_mask=pad_mask, training=training)
         attn_out = self._dropout(attn_out, training=training)
         x += attn_out
 
