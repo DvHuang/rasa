@@ -125,11 +125,16 @@ LABEL_KEY = LABEL
 LABEL_SUB_KEY = IDS
 LENGTH = "length"
 INDICES = "indices"
-SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
-SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
+#SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME, ACTION_TEXT]
+#SEQUENCE_FEATURES_TO_ENCODE = [TEXT, ACTION_TEXT, f"{LABEL}_{ACTION_TEXT}"]
+#LABEL_FEATURES_TO_ENCODE = [
+#    f"{LABEL}_{ACTION_NAME}",
+#    f"{LABEL}_{ACTION_TEXT}",
+#    f"{LABEL}_{INTENT}",
+#]
+SENTENCE_FEATURES_TO_ENCODE = [INTENT, TEXT, ACTION_NAME]
+SEQUENCE_FEATURES_TO_ENCODE = [TEXT]
 LABEL_FEATURES_TO_ENCODE = [
-    f"{LABEL}_{ACTION_NAME}",
-    f"{LABEL}_{ACTION_TEXT}",
     f"{LABEL}_{INTENT}",
 ]
 STATE_LEVEL_FEATURES = [ENTITIES, SLOTS, ACTIVE_LOOP]
@@ -1147,7 +1152,8 @@ class TED(TransformerRasaModel):
             entity_tag_specs: the entity tag specifications
         """
         super().__init__("TED", config, data_signature, label_data)
-
+        
+        logger.info("----------------[Branch_version:david_1.0.1]----------------")
         self.max_history_featurizer_is_used = max_history_featurizer_is_used
 
         self.predict_data_signature = {
