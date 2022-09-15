@@ -28,6 +28,7 @@ class RestInput(InputChannel):
 
     @classmethod
     def name(cls) -> Text:
+        print ("rest make sure")
         return "rest"
 
     @staticmethod
@@ -103,10 +104,12 @@ class RestInput(InputChannel):
             should_use_stream = rasa.utils.endpoints.bool_arg(
                 request, "stream", default=False
             )
+            print ("sender_id:{} text:{}".format(sender_id, text))
             input_channel = self._extract_input_channel(request)
             metadata = self.get_metadata(request)
 
             if should_use_stream:
+                print ("should use stream")
                 return response.stream(
                     self.stream_response(
                         on_new_message, text, sender_id, input_channel, metadata
@@ -114,6 +117,7 @@ class RestInput(InputChannel):
                     content_type="text/event-stream",
                 )
             else:
+                print ("else")
                 collector = CollectingOutputChannel()
                 # noinspection PyBroadException
                 try:
@@ -135,8 +139,12 @@ class RestInput(InputChannel):
                         f"An exception occured while handling "
                         f"user message '{text}'."
                     )
+                print ("collector messages")
+                print (collector.messages)
                 return response.json(collector.messages)
 
+        print ("custom_webhook:{}")
+        print (custom_webhook)
         return custom_webhook
 
 
